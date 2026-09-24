@@ -1,3 +1,21 @@
+# codex-proxy
+
+**把 ChatGPT 订阅（Codex）的模型能力，用 Anthropic Messages 协议代理出来。**
+*Proxy your ChatGPT (Codex) subscription as an Anthropic-compatible API.*
+
+这是一个本地代理程序：Claude Code 等支持 Anthropic 协议的客户端把请求发给它，
+它翻译成 Responses 协议转发给订阅后端，再把结果翻译回 Anthropic 格式。
+自带一个终端控制面板，用来观察请求流水、订阅额度和修改配置。
+
+- 本仓库是 [openai/codex](https://github.com/openai/codex) 的 fork。
+  **上游文件保持原样**（只新增文件，不改现有代码），以便随时合并上游更新。
+- 我们的代码将位于 `codex-rs/anthropic-proxy/`（尚未创建）。
+- 目标、三条原则、复用清单、里程碑（M0–M7）与风险见 [DESIGN.md](DESIGN.md)。
+
+---
+
+> 以下为上游 [openai/codex](https://github.com/openai/codex) 的 README 原文，保持原样，便于合并上游更新。
+
 <p align="center"><strong>Codex CLI</strong> is a coding agent from OpenAI that runs locally on your computer.
 <p align="center">
   <img src="https://github.com/openai/codex/blob/main/.github/codex-cli-splash.png" alt="Codex CLI splash" width="80%" />
